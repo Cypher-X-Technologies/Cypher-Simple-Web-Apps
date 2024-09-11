@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .quiz-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.2s;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.4s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #score {
+    font-size: 1.2em;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.6s;
+  }
+  
+  /* Fade In animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fade Out animation */
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  

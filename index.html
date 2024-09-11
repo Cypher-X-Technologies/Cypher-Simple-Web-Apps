@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#007BFF">
+</head>
+<body>
+  <div class="quiz-container" id="quiz-container">
+    <h2 id="question">Question Text</h2>
+    <ul class="options">
+      <li>
+        <input type="radio" name="answer" id="a" class="answer">
+        <label for="a" id="a_text">Answer A</label>
+      </li>
+      <li>
+        <input type="radio" name="answer" id="b" class="answer">
+        <label for="b" id="b_text">Answer B</label>
+      </li>
+      <li>
+        <input type="radio" name="answer" id="c" class="answer">
+        <label for="c" id="c_text">Answer C</label>
+      </li>
+      <li>
+        <input type="radio" name="answer" id="d" class="answer">
+        <label for="d" id="d_text">Answer D</label>
+      </li>
+    </ul>
+    <button id="submit">Submit</button>
+    <p id="score"></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+          console.log('Service worker registered with scope:', registration.scope);
+        })
+        .catch(function(error) {
+          console.log('Service worker registration failed:', error);
+        });
+    }
+  </script>
+</body>
+</html>
